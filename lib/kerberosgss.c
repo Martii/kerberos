@@ -445,7 +445,7 @@ gss_client_response *authenticate_gss_client_wrap(gss_client_state* state, const
   gss_buffer_desc output_token = GSS_C_EMPTY_BUFFER;
   int ret = AUTH_GSS_CONTINUE;
   gss_client_response *response = NULL;
-  char buf[4096], server_conf_flags;
+  char buf[4096], server_conf_flags __attribute__ ((unused));
   unsigned long buf_size;
 
   // Always clear out the old response
